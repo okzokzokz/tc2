@@ -1,0 +1,32 @@
+import requests
+import random
+import string
+import time
+import uuid
+import itertools
+from itertools import count
+
+a = 200
+b = 404
+
+
+def id_generator(size=5, chars=string.ascii_uppercase + string.ascii_lowercase):
+    return ''.join(random.choice(chars) for _ in range(size))
+
+n = id_generator()
+
+
+r = ('https://soundcloud.com/lil_peep/euhmw9dbyo5p/s-'+n)
+response = requests.get('https://soundcloud.com/lil_peep/euhmw9dbyo5p/s-'+n)
+m = response.status_code
+
+while True:
+    n = id_generator()
+    r = ('https://soundcloud.com/lil_peep/euhmw9dbyo5p/s-'+n)
+    m==b
+
+    print('Not Found: '+r)
+
+else:
+    print('Found: ' +r)
+    time.sleep(100000000000000000)
